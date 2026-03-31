@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubyxnii - Official Store</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&display=swap">
+<style>
+:root{
+/* ปรับโทนสีเป็นชมพู-ม่วงพาสเทล */
+--bg:#F5F0FF; 
+--main:#CE93D8;
+--dark:#6A1B9A;
+--white:#FFFFFF;
+--glow:rgba(206, 147, 216, 0.4);
+--accent:#F8BBD0;
+--status-red:#FF8FB1;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Mitr',sans-serif;}
+body{
+background:var(--bg);
+display:flex;
+justify-content:center;
+position: relative;
+overflow-x: hidden;
+min-height: 100vh;
+}
+.bg-emojis {
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+z-index: -1;
+pointer-events: none;
+font-size: 24px;
+}
+.floating-emoji {
+position: absolute;
+animation: floatBG 15s infinite linear;
+opacity: 0.4;
+}
+@keyframes floatBG {
+0% { transform: translateY(110vh) rotate(0deg); }
+100% { transform: translateY(-10vh) rotate(360deg); }
+}
+.container{
+max-width:500px;
+width:100%;
+padding:20px 15px 40px;
+z-index: 1;
+}
+.section{
+background:var(--white);
+border-radius:20px;
+padding:25px 20px;
+margin-bottom:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+border:2px solid var(--main);
+}
+h1,h2,h3{color:var(--dark);}
+.center{text-align:center;}
+.logo-wrapper {
+position: relative;
+width: 200px;
+height: 200px;
+margin: 0 auto 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo{
+width:150px;height:150px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 6px 20px var(--glow);
+border: 4px solid var(--white);
+position: relative;
+z-index: 2;
+}
+.logo img{width:100%;height:100%;object-fit:cover;}
+.logo-deco {
+position: absolute;
+font-size: 28px;
+animation: pulse 3s infinite ease-in-out;
+}
+@keyframes pulse {
+0%, 100% { transform: scale(1); opacity: 0.8; }
+50% { transform: scale(1.2); opacity: 1; }
+}
+.badges{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-bottom:20px;
+}
+.badge{
+background:#fff;
+padding:8px 16px;
+border-radius:25px;
+box-shadow:0 4px 10px var(--glow);
+font-size:13px;
+color:var(--dark);
+border: 1px solid var(--main);
+}
+.btn{
+display:block;
+text-align:center;
+padding:14px;
+border-radius:25px;
+text-decoration:none;
+margin-top:15px;
+font-weight:500;
+transition: 0.3s;
+display: flex;
+align-items: center;
+justify-content:center;
+gap: 8px;
+}
+.btn-outline{
+background:#fff;
+border:2px dashed var(--main);
+color:var(--dark);
+}
+.status-dot {
+width: 10px;
+height: 10px;
+background-color: var(--status-red);
+border-radius: 50%;
+display: inline-block;
+animation: dotBlink 1.2s infinite ease-in-out;
+box-shadow: 0 0 8px var(--status-red);
+}
+@keyframes dotBlink {
+0% { opacity: 1; transform: scale(1); }
+50% { opacity: 0.3; transform: scale(1.2); }
+100% { opacity: 1; transform: scale(1); }
+}
+.btn-main{
+background:var(--main);
+color:#fff;
+}
+.step{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-bottom:12px;
+}
+.step-num{
+background:var(--main);
+color:#fff;
+width:26px;height:26px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:13px;
+flex-shrink:0;
+margin-top:2px;
+}
+.price-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+background:#FEF7FF;
+padding:10px 15px;
+border-radius:15px;
+border-left: 4px solid var(--main);
+}
+.price-tag{
+background:var(--main);
+color:#fff;
+padding:3px 12px;
+border-radius:20px;
+font-size:14px;
+white-space: nowrap;
+}
+.footer{
+text-align:center;
+margin-top:30px;
+}
+.socials{
+display:flex;
+gap:8px;
+justify-content:center;
+margin-top:15px;
+}
+.socials a{
+flex:1;
+max-width:100px;
+text-align:center;
+padding:8px;
+border-radius:25px;
+background:#fff;
+text-decoration:none;
+color:var(--dark);
+font-size:11px;
+border:1px solid #F3E5F5;
+}
+.small{font-size:12px;opacity:.7;margin-top:10px;}
+.rule-box {
+background: #FFF9FE;
+padding: 15px;
+border-radius: 15px;
+font-size: 14px;
+margin-top: 15px;
+border: 1px dashed var(--main);
+}
+</style>
+</head>
+<body>
+<div class="bg-emojis">
+<span class="floating-emoji" style="left: 10%; animation-delay: 0s;">✨</span>
+<span class="floating-emoji" style="left: 25%; animation-delay: 2s;">💖</span>
+<span class="floating-emoji" style="left: 45%; animation-delay: 4s;">📱</span>
+<span class="floating-emoji" style="left: 70%; animation-delay: 6s;">🦄</span>
+<span class="floating-emoji" style="left: 85%; animation-delay: 8s;">🔮</span>
+</div>
+<div class="container">
+<div class="section center" style="border:none;box-shadow:none;background:transparent;">
+<div class="logo-wrapper">
+<span class="logo-deco" style="top: 0; left: 10%;">📱</span>
+<span class="logo-deco" style="bottom: 10%; right: 5%;">✨</span>
+<span class="logo-deco" style="top: 20%; right: 0%;">💖</span>
+<div class="logo">
+<img src="https://via.placeholder.com/150" alt="Rubyxnii logo">
+</div>
+</div>
+<h1>Rubyxnii</h1>
+<p style="color:var(--dark);opacity:.8;margin:10px 0 20px;">
+อาณาจักรแอพพรีเมี่ยมราคาถูก แอคไทย ตอบช้าแม่ค้าทำงานประจำ ขอคนรอได้นะคะ☺️
+</p>
+<div class="badges">
+<div class="badge">🤖 Android</div>
+<div class="badge">🍎 iOS</div>
+<div class="badge">💎 Premium App</div>
+<div class="badge">🇹🇭 แอคไทย</div>
+</div>
+<a href="https://lin.ee/UUwQFMf" class="btn btn-outline">
+<span class="status-dot"></span> เปิดรับออเดอร์อยู่นะคะ 💧💧
+</a>
+</div>
+
+<div class="section">
+<h2>📝 รายละเอียดระบบ</h2>
+<div class="step"><div class="step-num">1</div><div>เลือกดูรายการตามระบบมือถือของคุณ</div></div>
+<div class="step"><div class="step-num">2</div><div>แคปภาพรายการที่สนใจส่งให้ทางร้าน</div></div>
+<div class="step"><div class="step-num">3</div><div>โอนเงินและรอรับแอพได้ทันที</div></div>
+<div class="step"><div class="step-num">4</div><div>หากตอบช้าขออภัย แม่ค้าทำงานประจำค่ะ</div></div>
+<a href="https://drive.google.com/drive/folders/1xeWz3nqI0BLUvfOVwdeUbRbklGlYg624" class="btn btn-main">ดูรายการ Android 🤖</a>
+<a href="https://drive.google.com/drive/folders/1Y_33tlWsNnPl_B5TVPbxemkUBqpC4S74" class="btn btn-outline">ดูรายการ iOS 🍎</a>
+</div>
+
+<div class="section">
+<h2>💰 เมนูแอพพรีเมี่ยม</h2>
+<div class="price-row"><span>Android (รวมรายการ)</span><span class="price-tag">คลิกดูราคา</span></div>
+<div class="price-row"><span>iOS (รวมรายการ)</span><span class="price-tag">คลิกดูราคา</span></div>
+<div class="price-row"><span>Premium App (แนะนำ)</span><span class="price-tag">ราคาถูก</span></div>
+<a href="https://drive.google.com/drive/folders/103nGqt3fQ3TtsFCxAcf0fGKvYhaRFbPV" class="btn btn-main" style="background:#BA68C8;">รวม Premium App ทั้งหมด ✨</a>
+<div class="rule-box">
+<strong>📍 หมายเหตุร้าน Rubyxnii:</strong><br>
+• ตอบช้าเล็กน้อยเนื่องจากทำงานประจำ<br>
+• แอคไทย คุณภาพพรีเมี่ยม<br>
+• สอบถามรุ่นที่รองรับก่อนสั่งซื้อได้ค่ะ
+</div>
+</div>
+
+<div class="footer">
+<a href="https://lin.ee/UUwQFMf" class="btn btn-main">สั่งงาน / สอบถามทาง LINE 🎀</a>
+<div class="socials">
+<a href="https://www.facebook.com/share/1B4eLRFWuN/">Facebook</a>
+<a href="https://lin.ee/UUwQFMf">Line@</a>
+<a href="https://www.instagram.com/rubyxnii?igsh=cnVyN2ExODVzMXcw">Instagram</a>
+</div>
+<p class="small">© 2026 Rubyxnii - ขอบคุณที่ใช้บริการค่ะ</p>
+</div>
+</div>
+</body>
+</html>
